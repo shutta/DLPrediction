@@ -18,14 +18,15 @@ public class DLPrediction
 	    EasyPredictModelWrapper model = new EasyPredictModelWrapper(rawModel);
 	    RowData row = new RowData();
 
-	    row.put("Year", "1987");
-	    row.put("Month", "10");
-	    row.put("DayofMonth", "14");
-	    row.put("DayOfWeek", "3");
-	    row.put("CRSDepTime", "730");
-	    row.put("UniqueCarrier", "PS");
-	    row.put("Origin", "SAN");
-	    row.put("Dest", "SFO");
+	    row.put("Jose","14.5");
+	    row.put("Omar", "42.8");
+
+//	    row.put("DayofMonth", "14");
+//	    row.put("DayOfWeek", "3");
+//	    row.put("CRSDepTime", "730");
+//	    row.put("UniqueCarrier", "PS");
+//	    row.put("Origin", "SAN");
+//	    row.put("Dest", "SFO");
 	    
 	    //BinomialModelPrediction p = model.predictBinomial(row);
 
