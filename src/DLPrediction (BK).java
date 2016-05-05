@@ -1,9 +1,4 @@
 import java.io.*;
-import java.lang.Class;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
-
 import hex.genmodel.easy.RowData;
 import hex.genmodel.easy.exception.PredictException;
 import hex.genmodel.easy.EasyPredictModelWrapper;
@@ -126,20 +121,16 @@ public class DLPrediction
 	
     // ********* Member Variables ******************************************
 	private static String modelClassName = "deeplearning_d5c35043_8929_441a_9a23_dc44b06b519f";
-	
 	private Connection connection = null;
 	private Statement cmd;
 	private ResultSet rs = null;
 	
 	// ********* Main Function *********************************************
 	@SuppressWarnings("null")
-	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, PredictException, MalformedURLException 
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, PredictException 
 	{
-		 
-	    
-	    hex.genmodel.GenModel rawModel;
+		hex.genmodel.GenModel rawModel;
 	    rawModel = (hex.genmodel.GenModel) Class.forName(modelClassName).newInstance();
-	    
 	    EasyPredictModelWrapper model = new EasyPredictModelWrapper(rawModel);
 	    RowData row = new RowData();
 
